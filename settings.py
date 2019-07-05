@@ -1,14 +1,3 @@
-# from dotenv import load_dotenv
-# load_dotenv()
-# import os
-# import json
-
-# ## env
-# TEST = os.getenv("TEST")
-# DASHBOARD_STR = os.getenv("DASHBOARD_STR")
-# print(DASHBOARD_STR)
-# json_obj=json.loads(DASHBOARD_STR)
-
 null = None
 true = True
 false = False
@@ -112,29 +101,7 @@ d = {
               "Borr Cell": "Borr Cell",
               "Borr Home Phone": "Borr Home Phone",
               "BORR BUSINESS PHONE": "Borr Business Phone",
-              "BORR EMAIL": "Borr Email",
-              "Loan Number": "Loan Number",
-              "Borrower Name": "Borrower Name",
-              "Subject Property City": "Subject Property City",
-              "Subject Property State": "Subject Property State",
-              "Subject Property Zip": "Subject Property ZIP",
-              "Appraisal Due Date": "Appraisal Due Date",
-              "Seller Agnt Cell Phone": "Seller Agnt Cell Phone",
-              "Occupancy (P/S/I)": "Occupancy (P/S/I)",
-              "ULDD Attachment Type": "ULDD Attachment Type",
-              "SUBJECT PROPERTY # UNITS": "Subject Property # Units",
-              "Loan Type": "Loan Type",
-              "AGENCY CASE #": "Agency Case #",
-              "Buyer Agnt Cell Phone": "Buyer Agnt Cell Phone",
-              "BUYERS AGENT CONTACT NAME": "Buyers Agent Contact Name",
-              "Buyers Agent Phone": "Buyers Agent Phone",
-              "Co-Borr Cell": "Co-Borr Cell",
-              "Buyers Agent Email": "Buyers Agent Email",
-              "Co-Borr Business Phone": "Co-Borr Business Phone",
-              "Co-Borr Name": "Co-borr Name",
-              "Property Address": "Subject Property Address",
-              "Commitment Date": "Commit Due",
-              "milk": "Sellers Agent"
+              "BORR EMAIL": "Borr Email"
             },
             "loan_csv_custom_fields": ["Loan Purpose other"],
             "additional_notes": [
@@ -344,6 +311,57 @@ d = {
   ]
 }
 
+d2 = {
+    "a": {
+        "a1": { 
+            "a2": [ 1, 2, 3],
+            "b2": {
+                "a3": [
+                    { 
+                        "a4": True,
+                        "b4": [ "i", "am", "string"]
+                    }
+                ],
+                "b3": 123
+            }
+        }, 
+    },
+    "b": [
+            {},
+            {}
+        ],
+    "c": [1,2,3, 'str', False ],
+    "d": True
+}
+
+d3 = {
+    "a": {
+        "a1": { 
+            "a2": [ 1, 2, 3],
+            "b2": {
+                "a3": [
+                    { 
+                        "a4": True,
+                        "b4": [ "i", "am", "string"]
+                    }
+                ],
+                "b3": 123
+            }
+        }, 
+    },
+    "b": [
+            {
+                "ba2": [],
+                "bb2": {
+                    "ba3": [],
+                    "bb3": [ 1, 2, 3, 4 ]
+                }
+            }
+        ],
+    "c": [1,2,3, 'stuff', False ],
+    "d": True
+}
+
 
 def recursive_print(src, dpth = 0, key = ''):
     """ Recursively prints nested elements."""
@@ -351,20 +369,26 @@ def recursive_print(src, dpth = 0, key = ''):
 
     if isinstance(src, dict):
         for key, value in src.items():
-            print(tabs(dpth) + key)
+            print(tabs(dpth) + key + ': ' + value.__class__.__name__)
             recursive_print(value, dpth + 1, key)
     elif isinstance(src, list):
-        k = ''
         for litem in src:
             recursive_print(litem, dpth + 2)
         print()
     else:
         if key:
-            # print(tabs(dpth) + '%s = %s' % (key, src.__class__.__name__))
-            # print(tabs(dpth) + '%s: %s, depth: %s' % (key, src.__class__.__name__, dpth))
              print(tabs(dpth) + '%s, depth: %s' % (src.__class__.__name__, dpth))
 
         else:
-            print(tabs(dpth) + '%s %s, depth: %s' % (src, src.__class__.__name__, dpth))
+            print(tabs(dpth) + '%s - %s, depth: %s' % (src, src.__class__.__name__, dpth))
 
-recursive_print(d)
+expected = recursive_print(d2)
+response = recursive_print(d3)
+
+def check_types_bool(e, r):
+    if (e == r):
+        return True
+    else:
+        return False
+
+print(check_types_bool(expected, response))
