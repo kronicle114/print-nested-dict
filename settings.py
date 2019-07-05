@@ -354,7 +354,7 @@ d3 = {
                 "ba2": [],
                 "bb2": {
                     "ba3": [],
-                    "bb3": [ 1, 2, 3, 4 ]
+                    "bb3": [ 1, 2, 3, False ]
                 }
             }
         ],
@@ -374,10 +374,9 @@ def recursive_print(src, dpth = 0, key = ''):
     elif isinstance(src, list):
         for litem in src:
             recursive_print(litem, dpth + 2)
-        print()
     else:
         if key:
-             print(tabs(dpth) + '%s, depth: %s' % (src.__class__.__name__, dpth))
+            print(tabs(dpth) + '%s, depth: %s' % (src.__class__.__name__, dpth))
 
         else:
             print(tabs(dpth) + '%s - %s, depth: %s' % (src, src.__class__.__name__, dpth))
