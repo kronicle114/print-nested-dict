@@ -362,35 +362,27 @@ d3 = {
     "d": True
 }
 
-def recursive_print(src, dpth = 0, key = ''):
+def recursive_print(data, dpth = 0, key = ''):
     """ Recursively prints nested elements."""
-    tabs = lambda n: ' ' * n * 2 # or 2 or 8 or...
-
-    if isinstance(src, dict):
-        for key, value in src.items():
-            print(tabs(dpth) + key + ': ' + value.__class__.__name__ )
+    tabs = lambda n: ' ' * n * 2 
+    if isinstance(data, dict):
+        print(tabs(dpth) + '\x1b[0;33;40m { \x1b[0m')
+        for key, value in data.items():
+            print(tabs(dpth+1) + key + ': ' + value.__class__.__name__ + ',' )
             recursive_print(value, dpth + 1, key)
-    elif isinstance(src, list):
-        print(tabs(dpth) + '[ ')
-        i = 0
-        length = 0
-        for litem in src:
-            i = src.index(litem)
-            length = len(src)
-            # print('len:', length)
+        print(tabs(dpth) + '\x1b[0;33;40m } \x1b[0m')
+    elif isinstance(data, list):
+        print(tabs(dpth) + '\x1b[0;35;40m', '[', '\x1b[0m')
+        for litem in data:
             recursive_print(litem, dpth + 2)
-        # if (i == length-1):
-        #     print(tabs(dpth) + ']')
+        print(tabs(dpth) + '\x1b[0;35;40m', ']', '\x1b[0m')
     else:
         if key:
             pass
-            # print(tabs(dpth) + '%s, depth: %s' % (src.__class__.__name__, dpth))
-            # print(tabs(dpth) + '}')
         else:
-            # print('here', src.index())
-            print(tabs(dpth) + '%s - %s, depth: %s ' % (src, src.__class__.__name__, dpth))
+            print(tabs(dpth) + '%s - %s, depth: %s ' % (data, data.__class__.__name__, dpth))
 
-recursive_print(d)
+val = recursive_print(d)
 
 # expected = recursive_print(d2)
 # response = recursive_print(d3)
