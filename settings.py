@@ -33,9 +33,9 @@ d = {
         "rush": false,
         "number": "Jun2601",
         "officer": {
-          "id": "5cee843b3cd7b7000e8c9e19",
+          "id": "32879438704398343948",
           "username": null,
-          "email": "trisha+loanofficer1@reggora.com",
+          "email": "test@test.com",
           "phone_number": "1231231234",
           "cell_number": null,
           "is_review_appraiser": false,
@@ -43,14 +43,14 @@ d = {
           "lastname": "lo1",
           "nmls_id": "",
           "lender": {
-            "id": "5ced94de9fa35354b5aac3fa",
+            "id": "32879438704398343948",
             "name": "Trisha Lender One",
             "time_limit": "0.04",
             "rush_time_limit": "1.0",
             "automatic_weighting_method": "manual",
             "automatic_manual_weights": {
-              "5cee7fbb7055d8003531c779": 0,
-              "5ceea2ad8b948d0033f85913": 100
+              "32879438704398343948": 0,
+              "32879438704398343948": 100
             },
             "send_appraiser_invoice": false,
             "send_borrower_appraisal": false,
@@ -59,16 +59,16 @@ d = {
             "blacklist": [
               {
                 "appraiser": {
-                  "id": "5cee7fdb7055d8003531c77d",
+                  "id": "32879438704398343948",
                   "firm_name": "Trish Appraiser Firm2",
-                  "lender_owner": "5ced94de9fa35354b5aac3fa",
+                  "lender_owner": "32879438704398343948",
                   "name": "Taylor Swift",
-                  "email": "trisha+appfirm2@reggora.com",
+                  "email": "tes@tes32879438704398343948.com",
                   "phone": "1231231234",
                   "is_blacklisted": true,
                   "blacklist_reason": "k",
                   "is_deleted": false,
-                  "company": "5cee7fdb7055d8003531c77c",
+                  "company": "32879438704398343948",
                   "accepting_jobs": true,
                   "not_accepting_jobs_reason": null,
                   "lender_coverage": [],
@@ -81,17 +81,17 @@ d = {
             "address": "7 Reggora St",
             "city": "ReggoraLand",
             "zip": "18003",
-            "email": "z@zippiex.com",
+            "email": "z@test.com",
             "default_files": [],
             "merchant": null,
-            "stripe": "acct_1EkAyoK7yUZYGQKL",
+            "stripe": "acct_1EkAasfyoK7yaasdUZYGQKL",
             "stripe_payments_enabled": true,
             "auto_send_payment": true,
             "wait_for_payment": true,
             "email_name": "Trisha's Test Bank",
             "email_text": "",
             "delivery_email_text": "Here is your completed appraisal",
-            "email_logo": "https://reggora-testing.s3.us-east-2.amazonaws.com:443/logos/05725b4ee9134088b4cbc67f144f5274.png",
+            "email_logo": "https://google.com",
             "custom_settings": {
               "evault_filename": true
             },
@@ -106,7 +106,7 @@ d = {
             "loan_csv_custom_fields": ["Loan Purpose other"],
             "additional_notes": [
               {
-                "id": "e25ce062-238e-4cbe-b975-7e73fbead890",
+                "id": "e25casde062-238e-4cbeads-b9d75-7e73fbead890",
                 "note": "twoasdfasdf",
                 "timestamp": "2019-04-11 12:59:30.723000"
               }
@@ -115,7 +115,7 @@ d = {
             "is_using_amc": null,
             "custom_panel": null,
             "use_internal_email": true,
-            "internal_email": "trisha@reggora.com",
+            "internal_email": "test@test.com",
             "use_internal_email_valuation": false,
             "internal_email_valuation": null,
             "default_allocation_mode": "automatically",
@@ -133,7 +133,7 @@ d = {
             "daily_email_time_hour": "12",
             "daily_email_time_minute": "00",
             "is_authorize_enabled": null,
-            "integration_user": "5d0bb10c17804d008fe40603",
+            "integration_user": "32879438704398343948",
             "stripe_payment_method": {
               "manually": "reggora_direct",
               "automatically": "reggora_direct",
@@ -149,7 +149,7 @@ d = {
           "created": "2019-05-29 13:11:22.901000",
           "is_demo": false,
           "role": {
-            "id": "5ced99672cd2080033cefe64",
+            "id": "32879438704398343948",
             "name": "Loan Officer",
             "permissions": {
               "order_access_all": {
@@ -194,7 +194,7 @@ d = {
         "consumers": [],
         "due_date": "2019-07-04 12:00:00",
         "lender": {
-          "id": "5ced94de9fa35354b5aac3fa",
+          "id": "32879438704398343948",
           "name": "Trisha Lender One",
           "time_limit": "0.04",
           "rush_time_limit": "1.0",
@@ -225,7 +225,7 @@ d = {
   ],
   "incomplete_orders": [
     {
-      "id": "5d14d11d94349d000a8a90e1",
+      "id": "32879438704398343948",
       "status": "Finding Appraisers",
       "statusKey": "finding_appraisers",
       "on_hold": false,
@@ -236,11 +236,11 @@ d = {
       "appraiser_requested_cancel": false,
       "due_date": "2019-07-20 12:00:00",
       "accepted": {
-        "id": "5ceea2ad8b948d0033f85913",
+        "id": "32879438704398343948",
         "firm_name": "Trish Appraiser Firm3",
         "accepting_jobs": true,
-        "company": "5ceea2ad8b948d0033f85912",
-        "email": "trisha+appfirm3@reggora.com",
+        "company": "32879438704398343948",
+        "email": "test@test.com",
         "phone": "1231231234"
       },
       "created": "2019-06-27 14:22:21.794000",
@@ -252,7 +252,7 @@ d = {
       "is_report_approved": null,
       "client_name": "Bo Rower",
       "loan_file": {
-        "id": "5d14cf3d94349d000d6efea3",
+        "id": "32879438704398343948",
         "rush": false,
         "number": "627A",
         "officer": null,
@@ -280,14 +280,14 @@ d = {
         ],
         "due_date": "2019-07-20 12:00:00",
         "lender": {
-          "id": "5ced94de9fa35354b5aac3fa",
+          "id": "32879438704398343948",
           "name": "Trisha Lender One",
           "time_limit": "0.04",
           "rush_time_limit": "1.0",
           "address": "7 Reggora St",
           "city": "ReggoraLand",
           "zip": "18003",
-          "email": "z@zippiex.com",
+          "email": "test@test.com",
           "ucdp_business_unit_number": "341234231325",
           "ead_business_unit_number": "12351235135151",
           "fha_lender_id": "",
@@ -363,7 +363,7 @@ d3 = {
 }
 
 def recursive_print(data, dpth = 0, key = ''):
-    """ Recursively prints nested elements."""
+    """ Recursively prints data types of nested elements"""
     tabs = lambda n: ' ' * n * 2 
     if isinstance(data, dict):
         print(tabs(dpth) + '\x1b[0;33;40m { \x1b[0m')
@@ -386,11 +386,3 @@ val = recursive_print(d)
 
 # expected = recursive_print(d2)
 # response = recursive_print(d3)
-
-# def check_types_bool(e, r):
-#     if (e == r):
-#         return True
-#     else:
-#         return False
-
-# print(check_types_bool(expected, response))
