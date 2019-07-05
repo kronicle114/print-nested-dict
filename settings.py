@@ -362,32 +362,43 @@ d3 = {
     "d": True
 }
 
-
 def recursive_print(src, dpth = 0, key = ''):
     """ Recursively prints nested elements."""
     tabs = lambda n: ' ' * n * 2 # or 2 or 8 or...
 
     if isinstance(src, dict):
         for key, value in src.items():
-            print(tabs(dpth) + key + ': ' + value.__class__.__name__)
+            print(tabs(dpth) + key + ': ' + value.__class__.__name__ )
             recursive_print(value, dpth + 1, key)
     elif isinstance(src, list):
+        print(tabs(dpth) + '[ ')
+        i = 0
+        length = 0
         for litem in src:
+            i = src.index(litem)
+            length = len(src)
+            # print('len:', length)
             recursive_print(litem, dpth + 2)
+        # if (i == length-1):
+        #     print(tabs(dpth) + ']')
     else:
         if key:
-            print(tabs(dpth) + '%s, depth: %s' % (src.__class__.__name__, dpth))
-
+            pass
+            # print(tabs(dpth) + '%s, depth: %s' % (src.__class__.__name__, dpth))
+            # print(tabs(dpth) + '}')
         else:
-            print(tabs(dpth) + '%s - %s, depth: %s' % (src, src.__class__.__name__, dpth))
+            # print('here', src.index())
+            print(tabs(dpth) + '%s - %s, depth: %s ' % (src, src.__class__.__name__, dpth))
 
-expected = recursive_print(d2)
-response = recursive_print(d3)
+recursive_print(d)
 
-def check_types_bool(e, r):
-    if (e == r):
-        return True
-    else:
-        return False
+# expected = recursive_print(d2)
+# response = recursive_print(d3)
 
-print(check_types_bool(expected, response))
+# def check_types_bool(e, r):
+#     if (e == r):
+#         return True
+#     else:
+#         return False
+
+# print(check_types_bool(expected, response))
